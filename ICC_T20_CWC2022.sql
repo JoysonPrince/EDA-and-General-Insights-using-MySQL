@@ -222,13 +222,11 @@ select * from bowlers;
 -- As can be seen from the above statements, Triggers worked successfully after the insertion of newly added records into the table Bowlers */
 
 -- Step 15: Created a new Table Bowlerstats for more precise stats of a bowler
-
 CREATE TABLE BowlerStats(
 SerialNO INT PRIMARY KEY AUTO_INCREMENT,
 Player VARCHAR(23) NOT NULL,
 EconomyRate DECIMAL(3,2) NOT NULL,
-StrikeRate DECIMAL(4,2) NOT NULL,
-BallsBowled INT NOT NULL,
+BallsBowled INT,
 BowlingAvg DECIMAL(4,2) NOT NULL,
 Wickets INT NOT NULL
 );
@@ -236,12 +234,16 @@ Wickets INT NOT NULL
 select * from bowlerstats;
 ALTER TABLE bowlers
 ADD COLUMN BallsBowled INT AFTER Overs;
-UPDATE bowlers
-SET ballsbowled = 53
-WHERE Player ="Brandon Glover";
+
+[ UPDATE bowlers
+SET ballsbowled = 53 -- 1 Over = 6 balls
+WHERE Player ="Brandon Glover"; ] -- repeat this loop for all the records by reference to Overs column
+
 SELECT * FROM bowlerstats;
-INSERT INTO bowlerstats (serialno,player,economyrate,ballsbowled,bowlingavg,wickets)
-SELECT serialno,player,economyrate,ballsbowled,bowlingaverage,wickets FROM bowlers;
+-- Using the backfilling technique to fill the records from bowlers into bowlerstats
+INSERT INTO bowlerstats (serialno, player, economyrate, ballsbowled, bowlingavg, wickets)
+SELECT serialno, player, economyrate, ballsbowled, bowlingaverage, wickets FROM bowlers;
+-- after backfilling, fill the strikerate column with the below formula,
 UPDATE bowlerstats
 SET strikerate = (ballsbowled/wickets); 
 
@@ -257,7 +259,7 @@ SELECT * FROM bowlers;
 DELIMITER $$
 CREATE PROCEDURE top_performing_bowlers()
 BEGIN
-SELECT team,player,wickets,bowlingaverage,economyrate FROM bowlers
+SELECT team, player, wickets, bowlingaverage, economyrate FROM bowlers
 WHERE bowlingaverage < 16 AND Economyrate < 7.5
 GROUP BY team
 ORDER BY bowlingaverage DESC
@@ -267,12 +269,12 @@ DELIMITER ;
 -- We can add multiple records into the Table Bowlers and use this stored procedure to return top bowlers
 CALL top_performing_bowlers();
 
--- Step 18: Created  Stored Procedure with 2 IN-Parameters to display the necessary info about them
+-- Step 18: Created a Stored Procedure top_performing_batters with 2 input parameters for the user
 DELIMITER $$
-CREATE PROCEDURE top_performing_batters(IN t_eam VARCHAR(6),IN p_layer VARCHAR(23))
+CREATE PROCEDURE top_performing_batters(IN team_name VARCHAR(6),IN player_name VARCHAR(23))
 BEGIN
 SELECT team,player,average,runs FROM batavg
-WHERE team = t_eam AND player = p_layer;
+WHERE team = team_name AND player = player_name;
 END $$
 DELIMITER ;
 CALL top_performing_batters("eng","ben stokes"); 
