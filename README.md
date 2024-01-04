@@ -49,6 +49,10 @@ _Note: You might find codes along the lines reading, "DROP TABLE table_name", th
     score leading to a century. (Although a century doesn't matter, a match-winning score albeit a smaller inning matters 
     more)
     This gives credibilty to the team and improves the confidence & pedigree of a batter.
+    Top-5 batters by number of runs scored:
+    ![Top-5 runs query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/f117fc99-0496-40e9-b677-8d465b1d6306)
+
+    
 
 --> The batsmen are rated in a T2O game by their Strike Rate, average in the high-30's, this is described by Step 11
 
