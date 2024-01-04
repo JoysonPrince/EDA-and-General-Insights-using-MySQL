@@ -83,6 +83,12 @@ Top-5 batters by number of runs scored:
 
 --> A couple of **Stored Procedures** describing top-performing bowlers & top-performing batters based on the stats.
 
+i) This stored procedure gives a fixed result because the criteria is set to be bowlingaverage < 16 and Economyrate < 7.5, aka a deterministic output without any user input.
+![storedproc1_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/722acafb-049a-4cb2-9735-9c308c1bc493)
+
+ii) Here the user i asked to give 2 input parameters namely, team name & player name
+![storedproc2_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/d02f81ca-0142-4f25-8f0a-eb26a5480aa5)
+
 --> A **CASE Statement** to describe the best team based on their T2O Rankings.
 
 ![Case1_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/08c266d3-9575-4f6e-a5ce-96af4e3f0273)
