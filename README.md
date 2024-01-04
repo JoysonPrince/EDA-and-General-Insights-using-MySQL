@@ -28,6 +28,7 @@ _Note: You might find codes along the lines reading, "DROP TABLE table_name", th
 --> Performing an **INNER JOIN** onto tables #1 & #3 to analyze top-5 batsmen of WC2022 in terms of their batting average 
     and team.
     Did the grouping based on their teams to see which team had the better batters.
+    ![InnerJoin_Query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/c0ecc6ac-0ac9-48f3-8043-ae9a570531e5)
 
 --> Inserted a column named TeamCoach into table #1 for more perspective related to coaching staff
     Each team has a different coach obviouly, and I accomplished it with the repeated use of UPDATE statement by changing 
@@ -35,6 +36,7 @@ _Note: You might find codes along the lines reading, "DROP TABLE table_name", th
 
 --> A **VIEW** creation named T20_Team_Ranking which can be used throughout the session of the database unlike CTE's
     This VIEW is just a modular view on using different SQL concepts.
+    
 
 --> The PRIMARY KEY, FOREIGN KEY is generally declared while designing the DB, but in some cases if there exist a need to 
     modify or alter the constraints, this is how it's done.
