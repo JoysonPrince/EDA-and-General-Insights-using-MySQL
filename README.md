@@ -49,13 +49,14 @@ _Note: You might find codes along the lines reading, "DROP TABLE table_name", th
     score leading to a century. (Although a century doesn't matter, a match-winning score albeit a smaller inning matters 
     more)
     This gives credibilty to the team and improves the confidence & pedigree of a batter.
-    Top-5 batters by number of runs scored:
+    
+Top-5 batters by number of runs scored:
     ![Top-5 runs query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/f117fc99-0496-40e9-b677-8d465b1d6306)
     Top-5 batters with highest Strike Rates:
     ![Top-5 SR_Avg_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/fd58fdf7-3ab3-469b-b5c0-66afb15b1a87)
-    Batters with most 50's scored:
+    Teams with most 50's scored:
 ![Most50s_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/7ae34a27-6c93-4341-8f52-d191885e4ba6)
-    Batters with most 100's scored:
+    Teams with most 100's scored:
 ![Most100s_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/024e41e6-4c3a-4dc6-9663-6b43218f7954)
 
 
