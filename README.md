@@ -36,7 +36,7 @@ _Note: You might find codes along the lines reading, "DROP TABLE table_name", th
 
 --> A **VIEW** creation named T20_Team_Ranking which can be used throughout the session of the database unlike CTE's
     This VIEW is just a modular view on using different SQL concepts.
-    
+    ![VIEW_Query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/f079f570-8263-4580-9706-b26db3e57e2c)
 
 --> The PRIMARY KEY, FOREIGN KEY is generally declared while designing the DB, but in some cases if there exist a need to 
     modify or alter the constraints, this is how it's done.
