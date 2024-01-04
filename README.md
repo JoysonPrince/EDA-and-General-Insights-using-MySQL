@@ -72,11 +72,18 @@ Top-5 batters by number of runs scored:
    Economy Rate: The average number of runs conceded per over (An over has 6 balls)
    **Number of overs bowled/number of runs conceded**
 
+   ![bowlers_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/fce7fd2c-39e8-4161-8c83-5a8f8546da0d)
+
+
 --> The Economy Rate is added into the Bowlers table via generated column
     The column follows the formula for Economy Rate as mentioned above
 
+![bowlers_col_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/22e7f1ae-945b-4c9d-b436-6b85a1cc8e14)
+
 --> Exploring TRIGGER functionality:
     Whenever a new data is added into the Bowlers table, it should get auto-updated for every row record
+
+![post_trigger_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/1c42087d-3e83-4072-a323-f62cb4bb0707)
 
 --> Created another table BowlerStats for a neat data view on the stats.
     Added column 'Team' for which team the bowler belongs to & column 'StrikeRate' as well.
