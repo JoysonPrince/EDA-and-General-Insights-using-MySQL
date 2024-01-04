@@ -1,9 +1,9 @@
 create database if not exists CWC2022;
 USE CWC2022;
 
- /* SQL PROJECT using MySQL WorkBench for TechTip24 Certification */
+ /* SQL PROJECT using MySQL WorkBench */
  
- /* Step 1- Data Overview and Cleaning
+ /* Step 1- Data Overview
 DataSet reference: --[https://www.kaggle.com/datasets/adnananam/icc-mens-wc-t20-batting-stats-2022?utm_medium=social&utm_campaign=kaggle-dataset-share&utm_source=linkedin]--
 --I analyzed the dataset and found there are 7 data tables of which 1 table(table #3)is irrelevant because it contains the same values as of table #2
 Thus I selected 5 tables from the original dataset and created them as follows for analysis:
