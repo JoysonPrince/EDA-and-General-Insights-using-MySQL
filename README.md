@@ -85,8 +85,13 @@ Top-5 batters by number of runs scored:
 
 --> A **CASE Statement** to describe the best team based on their T2O Rankings.
 
+![Case1_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/08c266d3-9575-4f6e-a5ce-96af4e3f0273)
+
+
 --> **CASE Statement** to show the how the stats of a bowler has impacted his team.
     Keeping the Strike Rate as a criteria, describes how many balls he will bowl before picking up a wicket
+    
+![Case2_query](https://github.com/JoysonPrince/EDA-and-General-Insights-using-MySQL/assets/137388224/de3f102a-e05a-4f09-8552-59dd2cbe8cde)
     
    
  
